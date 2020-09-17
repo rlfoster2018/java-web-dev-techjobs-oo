@@ -40,6 +40,23 @@ public class Job {
         return Objects.hash(getId());
     }
 
+    @Override
+    public String toString () {
+        Integer id = this.getId();
+        String name = this.getName();
+        String employer = this.getEmployer().getValue();
+        String location = this.getLocation().getValue();
+        String position = this.getPositionType().getValue();
+        String core = this.getCoreCompetency().getValue();
+        return "\nID: " + id +
+                "\nName: " + name +
+                "\nEmployer: " + employer +
+                "\nLocation: " + location +
+                "\nPosition Type: " + position +
+                "\nCore Competency: " + core +
+                "\n";
+    }
+
     public int getId() {
         return id;
     }

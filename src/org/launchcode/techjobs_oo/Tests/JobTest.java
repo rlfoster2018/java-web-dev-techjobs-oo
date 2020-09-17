@@ -35,4 +35,16 @@ public class JobTest {
         assertEquals(fullJob1.getEmployer().getValue(), fullJob2.getEmployer().getValue());
     }
 
+    @Test
+    public void testToString() {
+        Job jobTest = new Job("Product Tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
+        assertEquals(jobTest.toString(),
+                "ID: " + "1" +
+                        "\nName: " + "Product Tester" +
+                        "\nEmployer: " + "ACME" +
+                        "\nLocation: " + "Desert" +
+                        "\nPosition Type: " + "Quality Control" +
+                        "\nCore Competency: " + "Persistence");
+    }
+
 }
